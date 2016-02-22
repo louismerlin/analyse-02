@@ -1,0 +1,72 @@
+\documentclass[1Opt]{report}
+\author{Louis Merlin}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+
+\renewcommand{\chaptername}{Chapitre}
+
+\begin{document}
+
+\title{Analyse II}
+\maketitle
+
+\tableofcontents
+
+
+\chapter{Équations différentielles ordinaires}
+
+\section{Définitions et exemples}
+
+
+\paragraph{Exemple 1}
+\[y'=0 \Rightarrow y(x)=C \quad \mbox{où} \quad C\in{\mathbb R}\]
+$y(x)=2$ est une solution, et $y(x)=C,\,\forall C\in{\mathbb R}$ est une solution
+plus générale.
+
+\paragraph{Définition}
+Une équation différentielle ordinaire est une expression
+\[ E(x,y(x),y'(x),\ldots,y^{(n)}(x))=0\]
+où $E:{\mathbb R}^{n+2}\rightarrow{\mathbb R}$ une fonction donnée,
+$n\in{\mathbb R}^\ast$\\
+On cherche un intervalle ouvert $I\subset{\mathbb R}$ et une fonction
+$y:I\rightarrow{\mathbb R}$ de classe $C^n$ telle que l'équation soit satisfaite
+pour tout $x\in I$.
+
+\paragraph{Applications}
+\begin{description}
+  \item EDO $\rightarrow$ croissance de la population, désintegration radioactive.
+  \item EDP $\rightarrow$ prévisions météo, marché financier.
+\end{description}
+
+\paragraph{Exemple 2}
+\begin{eqnarray*}
+   y''=0 & \Rightarrow & y'(x)=C_1\quad \mbox{ pour} \quad C_1\in{\mathbb R}, x\in{\mathbb R} \\
+   y'=C & \Rightarrow & y(x)=C_1x+C_2\quad \mbox{ pour} \quad C_1,C_2\in{\mathbb R},x\in{\mathbb R}
+\end{eqnarray*}
+
+\paragraph{Exemple 3}
+\[y+y'=0\Rightarrow y=y'\]
+Rappel : $(a^x)'=a^x\log{a}, \, \forall a\in{\mathbb R}$
+\[\log{a}=-1\Rightarrow a=\frac{1}{e}\Rightarrow \left(\left(\frac{1}{e}\right)^x\right)'=-\left(\frac{1}{e}\right)^x\]
+$(e^{-x})'=-e^{-x}$ est une solution pour tout $x\in{\mathbb R}$.\\
+Plus généralement, $(Ce^{-x})'=-Ce^{-x}$ pour $C\in{\mathbb R},\,x\in{\mathbb R}$.
+
+\paragraph{Exemple}
+$y'=-y$\quad "Équation à variables séparées"\\\\
+Si on écrit $y'=\frac{dy}{dx}\Rightarrow\frac{dy}{dx}=-y$\\
+\begin{eqnarray*}
+  \begin{tabular}{c c}
+    $\frac{dy}{y}=-dx$ & $\int{\frac{dy}{y}}=-\int{dx}$ \\
+    variables séparées & les primitives \\
+  \end{tabular}
+\end{eqnarray*}
+\begin{eqnarray*}
+  & \Rightarrow & \log{|y|}=-x+C_1 \\
+  & \Rightarrow & |y|=e^{-x+C_1}=e^{C_1}\times e^{-x}\\
+  & \Rightarrow & |y|=C_2e^{-x},\, C_2>0\\
+  & \Rightarrow & y(x)=\pm C_2e^{-x},\, C_2>0
+\end{eqnarray*}
+Mais $y(x)=0$ est aussi une solution.\\
+Finalement on a : $y(x)=Ce^{-x},\,\forall C\in{\mathbb R},\,\forall x\in{\mathbb R}$.
+
+\end{document}
