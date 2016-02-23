@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsfonts}
 \usepackage{amsmath}
+\usepackage{amssymb}
 
 \renewcommand{\chaptername}{Chapitre}
 
@@ -25,7 +26,7 @@ $y(x)=2$ est une solution, et $y(x)=C,\,\forall C\in{\mathbb R}$ est une solutio
 plus générale.
 
 \paragraph{Définition}
-Une équation différentielle ordinaire est une expression
+Une \textbf{équation différentielle ordinaire} est une expression
 \[ E(x,y(x),y'(x),\ldots,y^{(n)}(x))=0\]
 où $E:{\mathbb R}^{n+2}\rightarrow{\mathbb R}$ une fonction donnée,
 $n\in{\mathbb R}^\ast$\\
@@ -76,16 +77,59 @@ Finalement on a : $y(x)=Ce^{-x},\,\forall C\in{\mathbb R},\,\forall x\in{\mathbb
 \end{equation*}
 
 \paragraph{Définition}
-L'ordre de l'équation $(\ast)$ est $n$ si $E$ est une fonction non-constante
+L'\textbf{ordre} de l'équation $(\ast)$ est $n$ si $E$ est une fonction non-constante
 de $y^{(n)}$
 
 \paragraph{Définition}
-Si $(\ast)$ est une expression polynomiale de $y^{(n)}$, alors le degré de
+Si $(\ast)$ est une expression polynomiale de $y^{(n)}$, alors le \textbf{degré} de
 l'équation est le degré du polynôme en $y^{(n)}$. Si le degré est 1, alors
 l'équation est dite linéaire.
 
 \paragraph{Définition}
 Si l'expression $(\ast)$ ne dépend pas de de x, l'équation différentielle est
-dite autonome.
+dite \textbf{autonome}.
+
+\paragraph{Remarque}
+Si l'équation différentielle est autonome, et
+$y(x)={\mathbb R}\rightarrow{\mathbb R}$ est une solution, alors $y(x+C)$ l'est
+aussi pour tout $C\in{\mathbb R},\,x\in{\mathbb R}$ (par exemple dans l'Exemple
+3 : $y(x)=Ce^{-x}\Rightarrow y(x)=Ce^{-(x+C')}$ est aussi une solution).
+
+\paragraph{Type des équations différentielles}
+\begin{eqnarray*}
+  \begin{tabular}{l c c c}
+    Equation & Ordre & Degré & Autonome \\
+    $y'=0$ & 1 & 1 & oui \\
+    $y''=0$ & 2 & 1 & oui \\
+    $y+y'=5x+1$ & 1 & 1 & non \\
+    $sin(y')=0$ & 1 & $\varnothing$ & oui \\
+    $e^x(y')^2+y=0$ & 1 & 2 & non
+  \end{tabular}
+\end{eqnarray*}
+
+\paragraph{Définition}
+La \textbf{solution générale} d'une équation différentielle est l'ensemble de
+toutes les solutions de l'équation.
+
+\paragraph{Exemple}
+$y'=0\Rightarrow y(x)=2$ est une solution sur ${\mathbb R}$, mais ce n'est pas
+la solution générale. La solution générale est $y(x)=C$ pour tout
+$C\in{\mathbb R}$.
+
+\paragraph{Définition}
+\textbf{Problème de Cauchy}\\
+Résoudre l'équation $E\left(x,y(x),y'(x),\ldots,y^{(n)}\right)=0$ et trouver
+l'intervalle ouvert $I\subset{\mathbb R}$ et une fonction
+$y(x):I\rightarrow{\mathbb R}$ de classe $C^n(I)$ telle que
+$y(x_0)=b_0,\,y(x_1)=b_1,\, etc$. Le nombre de conditions initiales dépend du
+type de l'équation.
+
+\paragraph{Exemple}
+$y''=0\Rightarrow$ la solution générale est
+$y(x)=C_1x+C_2,\,\forall C_1,C_2\in{\mathbb R}$ sur ${\mathbb R}$. \\
+Si on a : $y(0)=1$ et $y(2)=4$ comme conditions initiales, alors $y(0)=C_2=1$ et
+$y(2)=C_1\times 2+C_2=2C_1+1=4\Rightarrow C_1=\frac{3}{2}$.\\
+La solution particulière satisfaisant les conditions initiales est $y(x)=
+\frac{3}{2}x+1$.
 
 \end{document}
