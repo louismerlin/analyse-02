@@ -2,6 +2,7 @@
 \author{Louis Merlin}
 \usepackage[utf8]{inputenc}
 \usepackage{amsfonts}
+\usepackage{amsmath}
 
 \renewcommand{\chaptername}{Chapitre}
 
@@ -52,12 +53,12 @@ $(e^{-x})'=-e^{-x}$ est une solution pour tout $x\in{\mathbb R}$.\\
 Plus généralement, $(Ce^{-x})'=-Ce^{-x}$ pour $C\in{\mathbb R},\,x\in{\mathbb R}$.
 
 \paragraph{Exemple}
-$y'=-y$\quad "Équation à variables séparées"\\\\
-Si on écrit $y'=\frac{dy}{dx}\Rightarrow\frac{dy}{dx}=-y$\\
+$y'=-y$\quad "Équation à variables séparées" \\
+Si on écrit $y'=\frac{dy}{dx}\Rightarrow\frac{dy}{dx}=-y$
 \begin{eqnarray*}
   \begin{tabular}{c c}
     $\frac{dy}{y}=-dx$ & $\int{\frac{dy}{y}}=-\int{dx}$ \\
-    variables séparées & les primitives \\
+    variables séparées & les primitives
   \end{tabular}
 \end{eqnarray*}
 \begin{eqnarray*}
@@ -68,5 +69,23 @@ Si on écrit $y'=\frac{dy}{dx}\Rightarrow\frac{dy}{dx}=-y$\\
 \end{eqnarray*}
 Mais $y(x)=0$ est aussi une solution.\\
 Finalement on a : $y(x)=Ce^{-x},\,\forall C\in{\mathbb R},\,\forall x\in{\mathbb R}$.
+
+\paragraph{Terminologie}
+\begin{equation*}
+  E\left(x,y(x),y'(x),\ldots,y^{(n)}\right)=0 \tag{$\ast$}
+\end{equation*}
+
+\paragraph{Définition}
+L'ordre de l'équation $(\ast)$ est $n$ si $E$ est une fonction non-constante
+de $y^{(n)}$
+
+\paragraph{Définition}
+Si $(\ast)$ est une expression polynomiale de $y^{(n)}$, alors le degré de
+l'équation est le degré du polynôme en $y^{(n)}$. Si le degré est 1, alors
+l'équation est dite linéaire.
+
+\paragraph{Définition}
+Si l'expression $(\ast)$ ne dépend pas de de x, l'équation différentielle est
+dite autonome.
 
 \end{document}
