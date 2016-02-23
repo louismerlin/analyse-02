@@ -132,4 +132,59 @@ $y(2)=C_1\times 2+C_2=2C_1+1=4\Rightarrow C_1=\frac{3}{2}$.\\
 La solution particulière satisfaisant les conditions initiales est $y(x)=
 \frac{3}{2}x+1$.
 
+\section{Equations différentielles à variables séparées (EDVS) (du premier ordre)}
+
+\paragraph{Définition}
+$f(y)\times y'(x)=g(x)$ où
+\begin{tabular}{l}
+  $f:I\rightarrow{\mathbb R}$ est une fonction continue sur $I$ \\
+  $g:I\rightarrow{\mathbb R}$ est une fonction continue sur $J$ \\
+\end{tabular}
+est une \textbf{équation différentielle à variables séparées} (EDVS).
+
+\paragraph{Explication}
+\[ f(y)\frac{dy}{dx}=g(x)\Leftrightarrow\int{f(y)dy}=\int{g(x)dx}\]
+Une fonction $y:J'\subset J\rightarrow I$ qui satisfait l'équation est une
+solution de classe $C'$.
+
+\paragraph{Théorème}
+\textbf{Existence et unicité d'une solution de EDVS} \\
+Soit
+\begin{tabular}{l}
+  $f:I\rightarrow{\mathbb R}$ une fonction continue telle que $f(y)\neq0$ sur $I$. \\
+  $g:I\rightarrow{\mathbb R}$ une fonction continue.
+\end{tabular} \\
+Alors pour tout couple $(x_0\in J,\,b_0\in I)$ l'équation
+\begin{equation*}
+  f(y)y'(x)=y(x) \tag{$\ast \ast$}
+\end{equation*}
+admet une solution $y:J'\rightarrow I$ vérifiant les conditions initiales
+$y(x_0)=b_0$. \\
+Si $y_1:J_1\rightarrow I$ et $y_2:J_2\rightarrow I$ sont deux solutions telles
+que $y_1(x_0)=y_2(x_0)=b_0$, alors $y_1(x)=y_2(x)$ pour $x\in J_1\cap J_2$.
+
+\paragraph{Démonstration}
+Soit :
+\begin{eqnarray*}
+  F(y)=\int_{b_0}^y f(s)ds & \Rightarrow & F(y) \mbox{ est monotone} \\
+  & \Rightarrow & F(y) \mbox{ est inversible et } F(b_0)=0 \\
+  & \Rightarrow & f(y)\neq0 \mbox{ sur } I
+\end{eqnarray*}
+Soit :
+\[ G(x)=\int^x_{x_0}g(s)ds\rightarrow G(x_0)=0 \quad x_0,x\in J \]
+Soit $y(x)=F^{-1}(G(x))$ sur un voisinage de $x_0\in J$ :
+\begin{eqnarray*}
+  \Rightarrow & F(y(x))=G(x) \\
+  \Rightarrow & F'(y(x))\times y'(x)=G'(x) \\
+  \Rightarrow & f(y(x))\times y'(x)=g'(x) \\
+  \Rightarrow & y(x)=F^{-1}(G(x)) \mbox{ est une solution} \\
+  \Rightarrow & y(x_0)=F^{-1}(G(x_0))=F^{-1}(0)=b_0 \\
+  \Rightarrow & y(x) \mbox{ satisfait les conditions initiales} \\
+\end{eqnarray*}
+\underline{Unicité :} Soient $y_1(x)$ et $y_2(x)$.
+\begin{eqnarray*}
+  y_1(x_0)=y_2(x_0)=b_0 & \Rightarrow & F(y_1(x))=F(y_2(x)) \\
+  & \Rightarrow & y_1(x)=y_2(x)
+\end{eqnarray*}
+
 \end{document}
